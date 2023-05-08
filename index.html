@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Web Quiz 1</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2>Sign Up</h2>
+        <form action="confirmation.html" name="signupForm" method="post" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" class="form-control" id="firstName" name="firstName">
+                <div id="firstNameError" class="invalid-feedback"></div>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" class="form-control" id="lastName" name="lastName">
+                <div id="lastNameError" class="invalid-feedback"></div>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select class="form-control" id="gender" name="gender">
+                    <option value="">-- Select Gender --</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <div id="genderError" class="invalid-feedback"></div>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" id="age" name="age">
+                <div id="ageError" class="invalid-feedback"></div>
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" name="username">
+                <div id="usernameError" class="invalid-feedback"></div>
+            </div>
+            <div class="form-group">
+                <label for="cnic">CNIC:</label>
+                <input type="text" class="form-control" id="cnic" name="cnic">
+                <div id="cnicError" class="invalid-feedback"></div>
+            </div>
+            <div class="form-group">
+                <label for="fatherName">Father Name:</label>
+                <input type="text" class="form-control" id="fatherName" name="fatherName">
+                <div id="fatherNameError" class="invalid-feedback"></div>
+            </div>
+            <div class="form-group">
+                <label for="qualification">Qualification:</label>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="matriculation" name="qualification[]"
+                        value="Matriculation">
+                    <label class="form-check-label" for="matriculation">Matriculation</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="intermediate" name="qualification[]"
+                        value="Intermediate">
+                    <label class="form-check-label" for="intermediate">Intermediate</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="bachelors" name="qualification[]"
+                        value="Bachelors">
+                    <label class="form-check-label" for="bachelors">Bachelors</label>
+                </div>
+                <div id="qualificationError" class="invalid-feedback"></div>
+            </div>
+            <div class="form-group">
+                <label for="interest">Interest:</label>
+                <textarea class="form-control" id="interest" name="interest" rows="5"></textarea>
+                <div id="interestError" class="invalid-feedback"></div>
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
